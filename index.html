@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seculart - Главная страница проекта</title>
+</head>
+
+<body class="bg-gray-50 font-gilroy">
+  <div class="min-h-screen flex flex-col items-center justify-center p-8">
+    <!-- Заголовок проекта -->
+    <div class="text-center mb-12">
+      <h1 class="text-6xl font-gilroy font-bold text-gray-900 mb-4">
+        Seculart Project
+      </h1>
+      <p class="text-xl text-gray-600 font-gilroy font-light">
+        Навигация по страницам проекта
+      </p>
+    </div>
+
+    <!-- Сетка со ссылками на страницы -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+
+      <!-- Admin Projects -->
+      <a href="admin_projects.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: Projects</h3>
+        </div>
+      </a>
+
+      <!-- Admin Project Approve/Reject -->
+      <a href="admin_project_approve_reject.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: Project Approve/Reject</h3>
+        </div>
+      </a>
+
+      <!-- Admin Project Block/Unblock/Delete -->
+      <a href="admin_project_block_unblock_delete.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: Project Block/Unblock/Delete</h3>
+        </div>
+      </a>
+
+      <!-- Admin Users -->
+      <a href="admin_users.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: Users</h3>
+        </div>
+      </a>
+
+      <!-- Admin User Block/Delete -->
+      <a href="admin_user_block_delete.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: User Block/Delete</h3>
+        </div>
+      </a>
+
+      <!-- Admin User Unblock/Proven -->
+      <a href="admin_user_unblock_proven.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: User Unblock/Proven</h3>
+        </div>
+      </a>
+
+      <!-- Admin Stats -->
+      <a href="admin_stats.html" target="_blank" class="group">
+        <div
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent group-hover:border-red-500">
+          <h3 class="text-xl font-gilroy font-semibold mb-3 text-gray-900">Admin: Stats</h3>
+        </div>
+      </a>
+
+
+    </div>
+
+    <!-- Информация о проекте -->
+    <div class="mt-16 text-center max-w-4xl">
+      <h2 class="text-2xl font-gilroy font-semibold text-gray-900 mb-4">
+        О проекте
+      </h2>
+      <p class="text-gray-600 font-gilroy mb-6">
+        Это шаблон проекта для верстки с использованием Vite, Tailwind CSS и компонентного подхода.
+        Проект настроен для быстрой разработки и легкой передачи фронтенд-разработчику.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 text-sm">ы
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">Vite</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">Tailwind CSS</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">EJS Components</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">Gilroy Font</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

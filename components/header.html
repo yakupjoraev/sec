@@ -1,0 +1,35 @@
+<header class="bg-white shadow-sm border-b border-gray-200">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Логотип -->
+      <div class="flex items-center">
+        <h1 class="text-xl font-bold text-gray-900">Мой Проект</h1>
+      </div>
+
+      <!-- Десктопное меню -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">О нас</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Услуги</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Контакты</a>
+      </nav>
+
+      <!-- Бургер-кнопка -->
+      <button id="burger-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
+      <div class="flex flex-col space-y-2">
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">Главная</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">О нас</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">Услуги</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">Контакты</a>
+      </div>
+    </div>
+  </div>
+</header>
