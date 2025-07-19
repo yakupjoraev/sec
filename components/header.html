@@ -1,34 +1,78 @@
-<header class="bg-white shadow-sm border-b border-gray-200">
+<header class="bg-white">
   <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-      <!-- Логотип -->
-      <div class="flex items-center">
-        <h1 class="text-xl font-bold text-gray-900">Мой Проект</h1>
+    <div class="flex items-center justify-between py-3">
+      <div class="flex items-center space-x-12">
+        <a href="/" class="flex items-center">
+          <img src="/img/logo-black.svg" alt="Seculart Logo" class="h-5 w-auto">
+        </a>
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-primary">
+          <a href="#" class="hover:opacity-70 transition-opacity">explore</a>
+          <a href="#" class="hover:opacity-70 transition-opacity">about</a>
+          <a href="#" class="hover:opacity-70 transition-opacity">settings</a>
+        </nav>
       </div>
 
-      <!-- Десктопное меню -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">О нас</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Услуги</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Контакты</a>
-      </nav>
+      <div class="flex-1 flex justify-center px-8 xl:px-16">
+        <div class="w-full max-w-lg">
+          <label for="search" class="sr-only">Search</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <input id="search" name="search"
+              class="block w-full bg-gray-100 border border-transparent rounded-md py-2.5 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:bg-white focus:border-gray-300 focus:ring-0 text-primary"
+              placeholder="Search" type="search">
+          </div>
+        </div>
+      </div>
 
-      <!-- Бургер-кнопка -->
-      <button id="burger-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="hidden sm:flex items-center space-x-2 text-sm font-bold text-primary">
+          <svg class="w-2.5 h-2.5 text-red-500" fill="currentColor" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="4" />
+          </svg>
+          <span>START PROJECT</span>
+        </a>
+        <button class="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </button>
+        <button id="burger-btn-main" class="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors z-50">
+          <svg id="burger-icon" class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden text-primary" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
     </div>
+    <div id="mobile-menu-main" class="lg:hidden hidden fixed top-0 left-0 w-full h-full bg-white z-40 pt-20">
+      <div class="container mx-auto px-4 py-4 flex flex-col">
+        <a href="#"
+          class="block text-primary hover:bg-gray-100 rounded-md transition-colors py-3 px-3 text-lg">explore</a>
+        <a href="#"
+          class="block text-primary hover:bg-gray-100 rounded-md transition-colors py-3 px-3 text-lg">about</a>
+        <a href="#"
+          class="block text-primary hover:bg-gray-100 rounded-md transition-colors py-3 px-3 text-lg">settings</a>
 
-    <!-- Мобильное меню -->
-    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
-      <div class="flex flex-col space-y-2">
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">Главная</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">О нас</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">Услуги</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors py-2">Контакты</a>
+        <div class="border-t my-4"></div>
+
+        <a href="#"
+          class="flex items-center space-x-2 text-sm font-bold text-primary hover:bg-gray-100 rounded-md py-3 px-3">
+          <svg class="w-2.5 h-2.5 text-red-500" fill="currentColor" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="4" />
+          </svg>
+          <span>START PROJECT</span>
+        </a>
       </div>
     </div>
   </div>

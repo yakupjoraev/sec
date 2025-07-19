@@ -11,6 +11,12 @@ export default {
         'gilroy': ['Gilroy', 'sans-serif'],
         'primary': ['Gilroy', 'sans-serif'],
       },
+      colors: {
+        'text-primary': '#262925',
+      },
+      textColor: {
+        'primary': '#262925',
+      }
     },
   },
   plugins: [],

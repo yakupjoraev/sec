@@ -168,16 +168,19 @@
 /* CSS переменные для шрифтов */
 :root {
   --font-gilroy: 'Gilroy', sans-serif;
+  --text-primary: #262925;
 }
 
 /* Базовые стили */
 @layer base {
   html {
     font-family: var(--font-gilroy);
+    color: var(--text-primary);
   }
 
   body {
     font-family: var(--font-gilroy);
+    color: var(--text-primary);
   }
 }
 

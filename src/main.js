@@ -1,59 +1,67 @@
 import './style.css'
 
-// Бургер-меню
-function initBurgerMenu() {
-  const burgerBtn = document.getElementById('burger-btn')
-  const mobileMenu = document.getElementById('mobile-menu')
+document.addEventListener('click', (e) => {
+  // --- Логика для основного мобильного меню ---
+  const burgerBtnMain = e.target.closest('#burger-btn-main');
+  if (burgerBtnMain) {
+    const mobileMenuMain = document.getElementById('mobile-menu-main');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
 
-  if (burgerBtn && mobileMenu) {
-    burgerBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden')
-    })
-
-    // Закрытие меню при клике вне его
-    document.addEventListener('click', (e) => {
-      if (!burgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden')
-      }
-    })
+    if (mobileMenuMain && burgerIcon && closeIcon) {
+      mobileMenuMain.classList.toggle('hidden');
+      burgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    }
   }
-}
 
-// Табы
-function initTabs() {
-  const tabButtons = document.querySelectorAll('.tab-button')
-  const tabContents = document.querySelectorAll('.tab-content')
+  // Закрытие основного меню по клику вне его
+  const mobileMenuMain = document.getElementById('mobile-menu-main');
+  if (mobileMenuMain && !mobileMenuMain.classList.contains('hidden')) {
+    const burger = e.target.closest('#burger-btn-main');
+    // Закрываем, только если клик был не по меню и не по кнопке открытия
+    if (!burger && !mobileMenuMain.contains(e.target)) {
+      mobileMenuMain.classList.add('hidden');
+      document.getElementById('burger-icon').classList.remove('hidden');
+      document.getElementById('close-icon').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      const tabId = e.target.dataset.tab
 
-      // Убираем активные классы у всех кнопок
-      tabButtons.forEach(btn => {
-        btn.classList.remove('border-blue-500', 'text-blue-600')
-        btn.classList.add('border-transparent', 'text-gray-500')
-      })
+  // --- Логика для бургер-меню админки (если понадобится) ---
+  const burgerBtnAdmin = e.target.closest('#burger-btn');
+  if (burgerBtnAdmin) {
+    const mobileMenuAdmin = document.getElementById('mobile-menu');
+    if (mobileMenuAdmin) {
+      mobileMenuAdmin.classList.toggle('hidden');
+      // Здесь тоже можно добавить смену иконок по аналогии, если у админки будет свой бургер
+    }
+  }
 
-      // Добавляем активные классы текущей кнопке
-      e.target.classList.remove('border-transparent', 'text-gray-500')
-      e.target.classList.add('border-blue-500', 'text-blue-600')
+  // --- Логика для табов (остается без изменений) ---
+  const tabButton = e.target.closest('.tab-button');
+  if (tabButton) {
+    const tabId = tabButton.dataset.tab;
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-      // Скрываем все контенты
-      tabContents.forEach(content => {
-        content.classList.add('hidden')
-      })
+    tabButtons.forEach(btn => {
+      btn.classList.remove('border-blue-500', 'text-blue-600');
+      btn.classList.add('border-transparent', 'text-gray-500');
+    });
 
-      // Показываем нужный контент
-      const activeContent = document.getElementById(tabId)
-      if (activeContent) {
-        activeContent.classList.remove('hidden')
-      }
-    })
-  })
-}
+    tabButton.classList.remove('border-transparent', 'text-gray-500');
+    tabButton.classList.add('border-blue-500', 'text-blue-600');
 
-// Инициализация после загрузки DOM
-document.addEventListener('DOMContentLoaded', () => {
-  initBurgerMenu()
-  initTabs()
-})
+    tabContents.forEach(content => {
+      content.classList.add('hidden');
+    });
+
+    const activeContent = document.getElementById(tabId);
+    if (activeContent) {
+      activeContent.classList.remove('hidden');
+    }
+  }
+});
