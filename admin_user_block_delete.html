@@ -9,15 +9,14 @@
 </head>
 
 <body class="bg-gray-50 font-gilroy">
-  <div class="min-h-screen flex flex-col items-center justify-center p-8">
-    <div class="text-center mb-12">
-      <h1 class="text-6xl font-gilroy font-bold text-gray-900 mb-4">
-        Admin: User Block/Delete
-      </h1>
-    </div>
-  </div>
+  <!-- Header -->
+  <%- include('./components/header.html') %>
 
-  <script type="module" src="/src/main.js"></script>
+    <%- include('./components/admin-user-profile.html') %>
+
+      <%- include('./components/footer.html') %>
+
+        <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

@@ -9,15 +9,19 @@
 </head>
 
 <body class="bg-gray-50 font-gilroy">
-  <div class="min-h-screen flex flex-col items-center justify-center p-8">
-    <div class="text-center mb-12">
-      <h1 class="text-6xl font-gilroy font-bold text-gray-900 mb-4">
-        Admin: Project Approve/Reject
-      </h1>
-    </div>
-  </div>
 
-  <script type="module" src="/src/main.js"></script>
+  <%- include('components/header.html') %>
+
+    <main>
+      <%- include('components/project-detail.html') %>
+        <%- include('components/tokenomics.html') %>
+          <%- include('components/project-team.html') %>
+            <%- include('components/project-feedback.html') %>
+    </main>
+
+    <%- include('components/footer.html') %>
+
+      <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

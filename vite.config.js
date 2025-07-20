@@ -121,19 +121,6 @@ export default defineConfig({
         },
         {
           entry: 'src/main.js',
-          filename: 'admin_users.html',
-          template: 'admin_users.html',
-          injectOptions: {
-            data: {
-              title: 'admin_users',
-            },
-            ejsOptions: {
-              views: [process.cwd()],
-            },
-          },
-        },
-        {
-          entry: 'src/main.js',
           filename: 'admin_user_block_delete.html',
           template: 'admin_user_block_delete.html',
           injectOptions: {
@@ -152,19 +139,6 @@ export default defineConfig({
           injectOptions: {
             data: {
               title: 'admin_user_unblock_proven',
-            },
-            ejsOptions: {
-              views: [process.cwd()],
-            },
-          },
-        },
-        {
-          entry: 'src/main.js',
-          filename: 'admin_stats.html',
-          template: 'admin_stats.html',
-          injectOptions: {
-            data: {
-              title: 'admin_stats',
             },
             ejsOptions: {
               views: [process.cwd()],

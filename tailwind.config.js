@@ -12,10 +12,15 @@ export default {
         'primary': ['Gilroy', 'sans-serif'],
       },
       colors: {
+        'accent': '#eb4226',
+        'dark': '#262925',
         'text-primary': '#262925',
       },
       textColor: {
         'primary': '#262925',
+        'accent': '#eb4226',
+        'dark': '#262925',
+        'text-primary': '#262925',
       }
     },
   },

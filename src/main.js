@@ -1,67 +1,94 @@
 import './style.css'
 
-document.addEventListener('click', (e) => {
-  // --- Логика для основного мобильного меню ---
-  const burgerBtnMain = e.target.closest('#burger-btn-main');
-  if (burgerBtnMain) {
-    const mobileMenuMain = document.getElementById('mobile-menu-main');
-    const burgerIcon = document.getElementById('burger-icon');
-    const closeIcon = document.getElementById('close-icon');
+function initTabs() {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-    if (mobileMenuMain && burgerIcon && closeIcon) {
-      mobileMenuMain.classList.toggle('hidden');
+  // Set first tab as active by default
+  if (tabButtons.length > 0) {
+    tabButtons[0].classList.add('bg-[#f4f4f4]');
+    tabButtons[0].classList.add('border-b-[#f4f4f4]');
+  }
+
+  // Add click listeners for tab switching
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.dataset.tab;
+
+      // Deactivate all tab buttons
+      tabButtons.forEach(btn => {
+        btn.classList.remove('bg-[#f4f4f4]');
+        btn.classList.remove('border-b-[#f4f4f4]');
+      });
+
+      // Hide all tab contents
+      tabContents.forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Activate the clicked tab button
+      button.classList.add('bg-[#f4f4f4]');
+      button.classList.add('border-b-[#f4f4f4]');
+
+      // Show the selected tab content
+      const activeTab = document.getElementById(tabId);
+      if (activeTab) {
+        activeTab.classList.remove('hidden');
+      }
+    });
+  });
+}
+
+function initMobileMenu() {
+  const burgerBtn = document.getElementById('burger-btn-main');
+  const mobileMenu = document.getElementById('mobile-menu-main');
+  const burgerIcon = document.getElementById('burger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (burgerBtn && mobileMenu && burgerIcon && closeIcon) {
+    burgerBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
       burgerIcon.classList.toggle('hidden');
       closeIcon.classList.toggle('hidden');
-      document.body.classList.toggle('overflow-hidden');
-    }
-  }
-
-  // Закрытие основного меню по клику вне его
-  const mobileMenuMain = document.getElementById('mobile-menu-main');
-  if (mobileMenuMain && !mobileMenuMain.classList.contains('hidden')) {
-    const burger = e.target.closest('#burger-btn-main');
-    // Закрываем, только если клик был не по меню и не по кнопке открытия
-    if (!burger && !mobileMenuMain.contains(e.target)) {
-      mobileMenuMain.classList.add('hidden');
-      document.getElementById('burger-icon').classList.remove('hidden');
-      document.getElementById('close-icon').classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-  }
-
-
-  // --- Логика для бургер-меню админки (если понадобится) ---
-  const burgerBtnAdmin = e.target.closest('#burger-btn');
-  if (burgerBtnAdmin) {
-    const mobileMenuAdmin = document.getElementById('mobile-menu');
-    if (mobileMenuAdmin) {
-      mobileMenuAdmin.classList.toggle('hidden');
-      // Здесь тоже можно добавить смену иконок по аналогии, если у админки будет свой бургер
-    }
-  }
-
-  // --- Логика для табов (остается без изменений) ---
-  const tabButton = e.target.closest('.tab-button');
-  if (tabButton) {
-    const tabId = tabButton.dataset.tab;
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabButtons.forEach(btn => {
-      btn.classList.remove('border-blue-500', 'text-blue-600');
-      btn.classList.add('border-transparent', 'text-gray-500');
     });
-
-    tabButton.classList.remove('border-transparent', 'text-gray-500');
-    tabButton.classList.add('border-blue-500', 'text-blue-600');
-
-    tabContents.forEach(content => {
-      content.classList.add('hidden');
-    });
-
-    const activeContent = document.getElementById(tabId);
-    if (activeContent) {
-      activeContent.classList.remove('hidden');
-    }
   }
+}
+
+function initMobileSearch() {
+  const mobileSearchButton = document.getElementById('mobile-search-button');
+  const mobileSearchOverlay = document.getElementById('mobile-search-overlay');
+
+  if (mobileSearchButton && mobileSearchOverlay) {
+    mobileSearchButton.addEventListener('click', function () {
+      mobileSearchOverlay.classList.toggle('hidden');
+      if (!mobileSearchOverlay.classList.contains('hidden')) {
+        document.getElementById('mobile-search-input').focus();
+      }
+    });
+  }
+}
+
+function initDropdowns() {
+  document.addEventListener('click', e => {
+    const isDropdownButton = e.target.matches("[data-dropdown-button]");
+    if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return;
+
+    let currentDropdown;
+    if (isDropdownButton) {
+      currentDropdown = e.target.closest('[data-dropdown]');
+      currentDropdown.classList.toggle('active');
+    }
+
+    document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+      if (dropdown === currentDropdown) return;
+      dropdown.classList.remove('active');
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initTabs();
+  initMobileMenu();
+  initMobileSearch();
+  initDropdowns();
 });
