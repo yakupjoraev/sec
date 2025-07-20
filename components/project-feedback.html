@@ -1,106 +1,101 @@
-<div class="bg-white px-8 py-8">
-  <div class="max-w-6xl mx-auto">
+<div class="bg-white lg:my-12 my-8">
+  <div class="container max-w-[1340px] w-full mx-auto px-4">
 
-    <!-- Tabs Navigation -->
-    <div class="flex border-b border-gray-200 mb-8">
-      <button class="px-6 py-3 text-sm font-medium border-b-2 border-blue-500 text-blue-600 focus:outline-none">
-        Feedback
-      </button>
-      <button
-        class="px-6 py-3 text-sm font-medium border-b-2 border-transparent text-dark hover:text-gray-700 focus:outline-none">
-        Ideas
-      </button>
-      <button
-        class="px-6 py-3 text-sm font-medium border-b-2 border-transparent text-dark hover:text-gray-700 focus:outline-none">
-        Updates
-      </button>
+    <!-- Табы -->
+    <div class="flex gap-10 mb-5">
+      <button class="text-lg font-bold text-dark border-b-2 border-dark hover:border-dark">Feedback</button>
+      <button class="text-lg font-medium text-dark border-b-2 border-transparent hover:border-dark">Ideas</button>
+      <button class="text-lg font-medium text-dark border-b-2 border-transparent hover:border-dark">Updates</button>
     </div>
 
-    <!-- Feedback Form -->
-    <div class="mb-8">
-      <div class="bg-gray-50 rounded-lg p-6">
-        <textarea
-          class="w-full min-h-[120px] p-4 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          placeholder="Write your feedback here...">
-        </textarea>
+    <!-- Форма отправки фидбека -->
+    <div class="lg:mb-10 mb-8">
+      <textarea placeholder="Write your feedback here..."
+        class="w-full h-32 lg:h-56 p-4 lg:p-6 border border-[#e5e5e5] rounded-md text-sm text-dark placeholder-[#919191] resize-none focus:outline-none focus:border-dark"></textarea>
 
-        <div class="flex justify-end mt-4">
-          <button class="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
-            Send →
-          </button>
-        </div>
+      <div class="flex justify-end mt-5">
+        <button
+          class="px-6 py-2 bg-dark text-white font-bold border border-dark text-sm rounded-md hover:bg-white hover:text-dark hover:border-dark hover:border transition-colors group flex items-center gap-2">
+          Send
+          <img src="./img/icons/send-white.svg" alt="send-white"
+            class="size-4 group-hover:[filter:invert(1)] group-hover:translate-x-[4px] transition-all duration-300">
+        </button>
       </div>
     </div>
 
-    <!-- Comments List -->
-    <div class="space-y-6">
+    <!-- Список комментариев -->
+    <div class="flex flex-col gap-5">
 
-      <!-- Comment 1 -->
-      <div class="flex space-x-4">
-        <div class="w-12 h-12 bg-gray-300 rounded-full flex-shrink-0">
-          <img src="/img/user-1.jpg" alt="Vernon Kenny" class="w-full h-full object-cover rounded-full">
+      <div class="flex gap-5 border-b border-[#e5e5e5] pb-5">
+        <div class="w-24 h-24 overflow-hidden flex-shrink-0">
+          <img src="/img/project-pic.png" alt="Vernon Kenny" class="w-full h-full object-cover bg-gray-200">
         </div>
         <div class="flex-1">
-          <div class="flex items-center space-x-2 mb-2">
-            <h4 class="font-semibold text-gray-900">Vernon Kenny</h4>
-            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+          <div class="flex items-center gap-2 mb-2">
+            <h4 class="font-bold text-dark text-sm">Vernon Kenny</h4>
+
+            <img src="./img/icons/check-3.svg" alt="check" class="size-5">
           </div>
-          <p class="text-gray-700 text-sm leading-relaxed">
-            Accusantium tenetur distinctio asperiores unde reiciendis. Quis modi quas velit ut excepteur. Sint
-            consectetur ut ut deleniti eque sunt velit totam accusamus ut occaecat velit. Et laboris feugiat duis ut
-            velis ut occaecat velit est velit voluptas in maiores.
+          <p class="text-sm text-dark leading-normal">
+            Imperdiet lectus tellus in quisque morbi mattis. Odio amet quis tellus phasellus. Ut augue odio a ac
+            imperdiet quam pellentesque id. Ultricies at sit facilisis cras non tellus id malesuada. Gravida sociis in a
+            donec sed diam porta nulla. Dictum non id in dictum natoque pellentesque aliquet. Eros facilisis lorem
+            tempus nec amet integer. Ante dolor elit in faucibus.
           </p>
         </div>
       </div>
 
-      <!-- Comment 2 -->
-      <div class="flex space-x-4">
-        <div class="w-12 h-12 bg-gray-300 rounded-full flex-shrink-0">
-          <img src="/img/user-2.jpg" alt="Guadalupe Marks" class="w-full h-full object-cover rounded-full">
+      <div class="flex gap-5 border-b border-[#e5e5e5] pb-5">
+        <div class="w-24 h-24 overflow-hidden flex-shrink-0">
+          <img src="/img/project-pic.png" alt="Vernon Kenny" class="w-full h-full object-cover bg-gray-200">
         </div>
         <div class="flex-1">
-          <div class="flex items-center space-x-2 mb-2">
-            <h4 class="font-semibold text-gray-900">Guadalupe Marks</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <h4 class="font-bold text-dark text-sm">Vernon Kenny</h4>
+
           </div>
-          <p class="text-gray-700 text-sm leading-relaxed">
-            In quia est nostrud voluptate dolor magna ipsum. Qui aspernatur leo, voluptate dolor ea dolore qui officia.
-            Vi duis nulla consequat eligend ex esse qui sunt eu thendeq. Sed ullamco elit si tempor exercit tempor magna
-            quis ea voluptate cupidatat sunt amet ex cillum dolore nonulla consequat.
+          <p class="text-sm text-dark leading-normal">
+            Imperdiet lectus tellus in quisque morbi mattis. Odio amet quis tellus phasellus. Ut augue odio a ac
+            imperdiet quam pellentesque id. Ultricies at sit facilisis cras non tellus id malesuada. Gravida sociis in a
+            donec sed diam porta nulla. Dictum non id in dictum natoque pellentesque aliquet. Eros facilisis lorem
+            tempus nec amet integer. Ante dolor elit in faucibus.
           </p>
         </div>
       </div>
 
-      <!-- Comment 3 -->
-      <div class="flex space-x-4">
-        <div class="w-12 h-12 bg-gray-300 rounded-full flex-shrink-0">
-          <img src="/img/user-3.jpg" alt="Ken Jost" class="w-full h-full object-cover rounded-full">
+      <div class="flex gap-5 border-b border-[#e5e5e5] pb-5">
+        <div class="w-24 h-24 overflow-hidden flex-shrink-0">
+          <img src="/img/project-pic.png" alt="Vernon Kenny" class="w-full h-full object-cover bg-gray-200">
         </div>
         <div class="flex-1">
-          <div class="flex items-center space-x-2 mb-2">
-            <h4 class="font-semibold text-gray-900">Ken Jost</h4>
-            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+          <div class="flex items-center gap-2 mb-2">
+            <h4 class="font-bold text-dark text-sm">Vernon Kenny</h4>
+
+            <img src="./img/icons/check-3.svg" alt="check" class="size-5">
           </div>
-          <p class="text-gray-700 text-sm leading-relaxed">
-            Ut quis et nostrud aute ex dolore aut laborum. Non deleniti aed exercitation voluptate accusantium proident.
-            Sint occaecat ex quis fugiat aute eligendi et sed. Qui officia tortor est sit fugiat. Et fugiat est est et
-            ruis fugiat aute officia tempor id sed in id sed fugiat et fugiat sit et sed fugiat.
+          <p class="text-sm text-dark leading-normal">
+            Imperdiet lectus tellus in quisque morbi mattis. Odio amet quis tellus phasellus. Ut augue odio a ac
+            imperdiet quam pellentesque id. Ultricies at sit facilisis cras non tellus id malesuada. Gravida sociis in a
+            donec sed diam porta nulla. Dictum non id in dictum natoque pellentesque aliquet. Eros facilisis lorem
+            tempus nec amet integer. Ante dolor elit in faucibus.
           </p>
         </div>
       </div>
 
-      <!-- Comment 4 -->
-      <div class="flex space-x-4">
-        <div class="w-12 h-12 bg-gray-300 rounded-full flex-shrink-0">
-          <img src="/img/user-4.jpg" alt="Guadalupe Walker" class="w-full h-full object-cover rounded-full">
+      <div class="flex gap-5 border-b border-[#e5e5e5] pb-5">
+        <div class="w-24 h-24 overflow-hidden flex-shrink-0">
+          <img src="/img/project-pic.png" alt="Vernon Kenny" class="w-full h-full object-cover bg-gray-200">
         </div>
         <div class="flex-1">
-          <div class="flex items-center space-x-2 mb-2">
-            <h4 class="font-semibold text-gray-900">Guadalupe Walker</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <h4 class="font-bold text-dark text-sm">Vernon Kenny</h4>
+
           </div>
-          <p class="text-gray-700 text-sm leading-relaxed">
-            Culpa quis sunt esse adipiscing officia exercitation. Sunt est ex cupidatat sint mollit. Duis esse consequat
-            et mollit quis et magna quis et laboriosam mollit in fugiat reprehend aute ipsum nostrud aliqua ex enim
-            consequat quis exercitation.
+          <p class="text-sm text-dark leading-normal">
+            Imperdiet lectus tellus in quisque morbi mattis. Odio amet quis tellus phasellus. Ut augue odio a ac
+            imperdiet quam pellentesque id. Ultricies at sit facilisis cras non tellus id malesuada. Gravida sociis in a
+            donec sed diam porta nulla. Dictum non id in dictum natoque pellentesque aliquet. Eros facilisis lorem
+            tempus nec amet integer. Ante dolor elit in faucibus.
           </p>
         </div>
       </div>

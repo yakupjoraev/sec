@@ -5,19 +5,18 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seculart - Admin: User Unblock/Proven</title>
+  <title>Seculart - Admin: User Block/Delete</title>
 </head>
 
-<body class="bg-gray-50 font-gilroy">
-  <div class="min-h-screen flex flex-col items-center justify-center p-8">
-    <div class="text-center mb-12">
-      <h1 class="text-6xl font-gilroy font-bold text-gray-900 mb-4">
-        Admin: User Unblock/Proven
-      </h1>
-    </div>
-  </div>
+<body class="font-gilroy">
+  <!-- Header -->
+  <%- include('./components/header.html') %>
 
-  <script type="module" src="/src/main.js"></script>
+    <%- include('./components/admin-user-profile-proven.html') %>
+
+      <%- include('./components/footer.html') %>
+
+        <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

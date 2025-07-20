@@ -6,8 +6,10 @@ function initTabs() {
 
   // Set first tab as active by default
   if (tabButtons.length > 0) {
+    tabButtons[0].classList.remove('bg-white');
     tabButtons[0].classList.add('bg-[#f4f4f4]');
-    tabButtons[0].classList.add('border-b-[#f4f4f4]');
+    tabButtons[0].classList.remove('border-[#e5e5e5]');
+    tabButtons[0].classList.add('border-[#f4f4f4]');
   }
 
   // Add click listeners for tab switching
@@ -18,7 +20,9 @@ function initTabs() {
       // Deactivate all tab buttons
       tabButtons.forEach(btn => {
         btn.classList.remove('bg-[#f4f4f4]');
-        btn.classList.remove('border-b-[#f4f4f4]');
+        btn.classList.add('bg-white');
+        btn.classList.remove('border-[#f4f4f4]');
+        btn.classList.add('border-[#e5e5e5]');
       });
 
       // Hide all tab contents
@@ -27,8 +31,10 @@ function initTabs() {
       });
 
       // Activate the clicked tab button
+      button.classList.remove('bg-white');
       button.classList.add('bg-[#f4f4f4]');
-      button.classList.add('border-b-[#f4f4f4]');
+      button.classList.remove('border-[#e5e5e5]');
+      button.classList.add('border-[#f4f4f4]');
 
       // Show the selected tab content
       const activeTab = document.getElementById(tabId);

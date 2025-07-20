@@ -5,19 +5,42 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seculart - Admin: Project Block/Unblock/Delete</title>
+  <title>Seculart - Admin: Project Approve/Reject</title>
 </head>
 
-<body class="bg-gray-50 font-gilroy">
-  <div class="min-h-screen flex flex-col items-center justify-center p-8">
-    <div class="text-center mb-12">
-      <h1 class="text-6xl font-gilroy font-bold text-gray-900 mb-4">
-        Admin: Project Block/Unblock/Delete
-      </h1>
-    </div>
-  </div>
+<body class="font-gilroy text-dark">
 
-  <script type="module" src="/src/main.js"></script>
+  <%- include('components/header.html') %>
+
+    <main>
+      <div class="container max-w-[1340px] w-full mx-auto px-4 ">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 text-sm lg:pt-8 lg:pb-12 pt-5 pb-8">
+          <a href="#" class="text-dark hover:text-accent flex items-center gap-1">
+            <img src="./img/icons/Home.svg" alt="home" class="size-4 mb-1">
+            <span class="text-dark text-sm border-b border-dark leading-tight">Home</span>
+          </a>
+          <span class="text-dark">-</span>
+          <a href="#" class="text-dark hover:text-accent flex items-center gap-1">
+            <span class="text-dark text-sm border-b border-dark leading-tight">Explore</span>
+          </a>
+          <span class="text-dark">-</span>
+          <span class="text-dark flex items-center gap-1">
+            <span class="text-dark text-sm border-b border-transparent leading-tight">Project #145678</span>
+          </span>
+        </nav>
+      </div>
+
+
+      <%- include('components/project-detail-2.html') %>
+        <%- include('components/tokenomics.html') %>
+          <%- include('components/project-team.html') %>
+            <%- include('components/project-feedback.html') %>
+    </main>
+
+    <%- include('components/footer.html') %>
+
+      <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
