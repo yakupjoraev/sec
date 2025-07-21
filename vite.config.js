@@ -145,6 +145,19 @@ export default defineConfig({
             },
           },
         },
+        {
+          entry: 'src/main.js',
+          filename: 'user_projects.html',
+          template: 'user_projects.html',
+          injectOptions: {
+            data: {
+              title: 'user_projects',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
       ],
     }),
   ],

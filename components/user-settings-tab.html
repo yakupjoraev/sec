@@ -1,0 +1,84 @@
+<!-- Settings Tab Content -->
+<div id="user-settings-tab" class="tab-content hidden flex-1">
+  <!-- Header -->
+  <div class="bg-white mb-5">
+    <div class="flex items-center justify-between gap-5">
+      <h1 class="text-3xl font-semibold text-dark">Settings</h1>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-1 flex flex-col gap-5">
+    <div class="bg-white rounded-lg">
+      <div class="max-w-3xl">
+        <div class="flex items-start flex-col md:flex-row gap-4 mb-4">
+          <div
+            class="flex-shrink-0 w-[200px] h-[200px] bg-white border border-[#e5e5e5] rounded-lg flex items-center justify-center">
+            <label for="photo-upload"
+              class="cursor-pointer bg-[#1A1A1A] text-white font-semibold py-2.5 px-6 rounded-lg flex items-center gap-2">
+              Upload
+              <img src="/img/icons/upload.svg" alt="Upload" class="w-5 h-5">
+            </label>
+            <input type="file" id="photo-upload" class="hidden">
+          </div>
+          <div class="pt-2 text-sm text-dark">
+            <p>Upload your photo (JPEG, JPG, PNG, PDF, TIFF).</p>
+            <p>Max size 2MB.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <input type="text" placeholder="Username"
+              class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+          </div>
+
+          <div class="relative">
+            <input type="text" value="0x576542asd12as1da2sf4a56sf74a56sfa" readonly
+              class="w-full border border-[#e5e5e5] h-12 rounded-md p-3 pr-28 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all line-clamp-1 overflow-hidden text-ellipsis">
+            <button
+              class="absolute right-4 top-1/2 -translate-y-1/2 bg-[#1A1A1A] text-white text-sm font-semibold py-1 px-3  h-8 rounded-md">Edit
+              Wallet</button>
+          </div>
+
+          <div class="relative flex items-center">
+            <img src="/img/icons/x.svg" alt="X" class="absolute left-3 w-4 h-4 ">
+            <input type="text" value="https://x.com/sternenko"
+              class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 pr-16 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all line-clamp-1 overflow-hidden text-ellipsis">
+            <button
+              class="absolute right-4 top-1/2 -translate-y-1/2 bg-[#1A1A1A] text-white text-sm font-semibold py-1 px-3  h-8 rounded-md">Verify</button>
+          </div>
+
+          <div class="relative flex items-center">
+            <img src="/img/icons/telegram.svg" alt="Telegram" class="absolute left-3 w-4 h-4 ">
+            <input type="text" placeholder="Telegram link"
+              class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+          </div>
+
+          <div class="relative flex items-center">
+            <div class="absolute left-3">
+              <img src="/img/icons/cib_imdb.svg" alt="IMDB" class="w-4 h-4 ">
+            </div>
+            <input type="text" placeholder="IMDB link profile"
+              class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+          </div>
+
+          <div>
+            <textarea placeholder="Bio"
+              class="w-full h-36 border border-[#e5e5e5] rounded-md p-3 text-sm resize-none placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"></textarea>
+          </div>
+
+          <div>
+            <textarea placeholder="About me"
+              class="w-full h-36 border border-[#e5e5e5] rounded-md p-3 text-sm resize-none placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"></textarea>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit"
+              class="w-full md:max-w-44 bg-[#1A1A1A] text-white font-semibold py-3 px-12 rounded-lg">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

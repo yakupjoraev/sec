@@ -1,0 +1,41 @@
+<div class="flex bg-white lg:pt-12 lg:pb-24 pt-8 pb-12">
+  <div class="container max-w-[1340px] w-full mx-auto px-4 flex gap-5 flex-col md:flex-row">
+    <div class="md:max-w-48 xl:max-w-72 max-w-full w-full flex-shrink-0">
+      <nav class="flex flex-col">
+        <button class="tab-button w-full flex items-center gap-3 p-3 text-left rounded-md
+           bg-white hover:bg-[#f4f4f4] text-dark font-medium border-b border-[#e5e5e5]" data-tab="user-projects-tab">
+          <img src="/img/icons/projects.svg" alt="Projects" class="size-5">
+          <span class="text-sm font-semibold">My Projects</span>
+        </button>
+
+        <button class="tab-button w-full flex items-center gap-3 p-3 text-left rounded-md
+           bg-white hover:bg-[#f4f4f4] text-dark font-medium border-b border-[#e5e5e5]"
+          data-tab="user-investments-tab">
+          <img src="/img/icons/dollar-black.svg" alt="Users" class="size-5">
+          <span class="text-sm font-semibold">My Investments</span>
+        </button>
+
+        <button class="tab-button w-full flex items-center gap-3 p-3 text-left rounded-md
+           bg-white hover:bg-[#f4f4f4] text-dark font-medium border-b border-[#e5e5e5]" data-tab="user-settings-tab">
+          <img src="/img/icons/settings.svg" alt="Statistics" class="size-5">
+          <span class="text-sm font-semibold">Settings</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="flex-1 flex flex-col">
+
+      <!-- Projects Tab -->
+      <%- include('user-projects-tab.html') %>
+
+        <!-- Investments Tab -->
+        <%- include('user-investments-tab.html') %>
+
+          <!-- Settings Tab -->
+          <%- include('user-settings-tab.html') %>
+
+    </div>
+  </div>
+
+</div>
