@@ -147,6 +147,58 @@ export default defineConfig({
         },
         {
           entry: 'src/main.js',
+          filename: 'main.html',
+          template: 'main.html',
+          injectOptions: {
+            data: {
+              title: 'main',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
+        {
+          entry: 'src/main.js',
+          filename: 'user_project.html',
+          template: 'user_project.html',
+          injectOptions: {
+            data: {
+              title: 'user_project',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
+        {
+          entry: 'src/main.js',
+          filename: 'user_project_failed.html',
+          template: 'user_project_failed.html',
+          injectOptions: {
+            data: {
+              title: 'user_project_failed',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
+        {
+          entry: 'src/main.js',
+          filename: 'user_project_launched.html',
+          template: 'user_project_launched.html',
+          injectOptions: {
+            data: {
+              title: 'user_project_launched',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
+        {
+          entry: 'src/main.js',
           filename: 'user_projects.html',
           template: 'user_projects.html',
           injectOptions: {

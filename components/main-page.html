@@ -1,0 +1,550 @@
+<div class="flex bg-white lg:py-12 lg:pb-24 py-8 pb-12">
+  <div class="container max-w-[1340px] w-full mx-auto px-4 flex gap-5 flex-col lg:flex-row">
+    <!-- Filters -->
+    <aside class="w-full lg:max-w-72 flex-shrink-0">
+      <div class="flex items-center justify-between gap-4 mb-5">
+        <h2 class="text-xl font-bold ">Filter projects by</h2>
+
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-y-4">
+        <div>
+          <h3 class="font-semibold mb-2">Connection</h3>
+          <div class="flex flex-col gap-y-2">
+            <label class="flex items-center gap-x-2 text-sm">
+              <input type="checkbox"
+                class="w-4 h-4 rounded border border-[#e5e5e5] text-dark focus:ring-dark focus:ring-2">
+              <span>New listing (30 Days)</span>
+            </label>
+            <label class="flex items-center gap-x-2 text-sm">
+              <input type="checkbox"
+                class="w-4 h-4 rounded border border-[#e5e5e5] text-dark focus:ring-dark focus:ring-2">
+              <span>Tracking</span>
+            </label>
+            <label class="flex items-center gap-x-2 text-sm">
+              <input type="checkbox"
+                class="w-4 h-4 rounded border border-[#e5e5e5] text-dark focus:ring-dark focus:ring-2">
+              <span>Can message</span>
+            </label>
+            <label class="flex items-center gap-x-2 text-sm">
+              <input type="checkbox"
+                class="w-4 h-4 rounded border border-[#e5e5e5] text-dark focus:ring-dark focus:ring-2">
+              <span>Your Projects</span>
+            </label>
+            <label class="flex items-center gap-x-2 text-sm">
+              <input type="checkbox"
+                class="w-4 h-4 rounded border border-[#e5e5e5] text-dark focus:ring-dark focus:ring-2">
+              <span>Your Attachments</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Type</option>
+            <option value="">Type 1</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Genre</option>
+            <option value="">Genre 1</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Keywords</option>
+            <option value="">Keywords 2</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Language</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Stage</option>
+            <option value="">Stage 1</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Budget</option>
+            <option value="">Budget 1</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer w-full">
+            <option value="" disabled selected>Attachments</option>
+            <option value="">Attachments 1</option>
+          </select>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Projects Feed -->
+    <main class="flex-1">
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-x-4">
+          <div>
+            <h1 class="text-3xl font-semibold text-dark">Projects Feed</h1>
+            <p class="text-sm text-dark flex items-center gap-2">
+              <span class="size-1.5 rounded-full bg-accent"></span>275 results are publicly visible or matches to you
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center max-w-56 w-full relative">
+          <select
+            class="appearance-none px-4 py-3 border border-[#e5e5e5] rounded-lg text-sm focus:outline-none bg-white cursor-pointer max-w-56 w-full">
+            <option>Trending</option>
+            <option>Recent</option>
+            <option>Most Funded</option>
+          </select>
+
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.30997 9.49672C7.22794 9.57865 7.11674 9.62466 7.00081 9.62466C6.88487 9.62466 6.77367 9.57865 6.69164 9.49672L2.31664 5.12172C2.23936 5.03878 2.19729 4.92909 2.19929 4.81574C2.20129 4.7024 2.2472 4.59426 2.32736 4.5141C2.40752 4.43395 2.51566 4.38803 2.629 4.38603C2.74234 4.38403 2.85204 4.4261 2.93497 4.50338L7.00081 8.56922L11.0666 4.50338C11.1067 4.4604 11.155 4.42592 11.2087 4.40201C11.2623 4.3781 11.3203 4.36524 11.379 4.3642C11.4377 4.36317 11.4961 4.37397 11.5506 4.39598C11.605 4.41798 11.6545 4.45073 11.6961 4.49228C11.7376 4.53382 11.7704 4.58331 11.7924 4.63778C11.8144 4.69226 11.8252 4.75061 11.8242 4.80935C11.8231 4.8681 11.8103 4.92603 11.7863 4.9797C11.7624 5.03336 11.728 5.08166 11.685 5.12172L7.30997 9.49672Z"
+              fill="black" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5 ">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-b border-[#e5e5e5] overflow-hidden flex flex-col gap-4 pb-5">
+          <img src="/img/project-pic.png" alt="Project" class="w-full h-[310px] object-cover">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-dark">Project Title 1</h3>
+                <p class="text-sm text-dark">Founder name: John Doe</p>
+                <p class="text-sm text-dark">UK, preprod, comedy</p>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <p class="text-lg font-bold text-dark">0.2 USDC</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1 flex-wrap">
+                <div class="flex items-center gap-1">
+                  <img src="/img/icons/check-1.svg" alt="check" class="size-4">
+                  <p class="text-sm font-bold text-dark">$20,000</p>
+                </div>
+                <p class="text-sm text-dark">of $1,000,000 invested.</p>
+              </div>
+
+              <div class="w-full h-1 bg-[#e8e8e8]">
+                <div class="w-[30%] bg-dark h-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
