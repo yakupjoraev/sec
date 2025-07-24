@@ -1,4 +1,6 @@
 import './style.css'
+import 'flatpickr/dist/flatpickr.min.css';
+import flatpickr from 'flatpickr';
 
 function initTabs() {
   const tabButtons = document.querySelectorAll('.tab-button');

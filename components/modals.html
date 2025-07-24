@@ -1,0 +1,200 @@
+<!-- Кнопки для вызова модалок -->
+<div class="flex flex-col gap-2 p-10">
+  <button id="openInvestModal"
+    class="bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-red-600 transition-colors">
+    Open Invest Modal
+  </button>
+  <button id="openBuySharesModal"
+    class="bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-red-600 transition-colors">
+    Open Buy Shares Modal
+  </button>
+  <button id="openConnectWalletModal"
+    class="bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-red-600 transition-colors">
+    Open Connect Wallet Modal
+  </button>
+</div>
+
+<!-- Backdrop для модалок -->
+<div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-[101] hidden"></div>
+
+<!-- Модальное окно Invest Now -->
+<div id="investModal" class="fixed inset-0 z-[102] items-center justify-center hidden">
+  <div class="bg-white rounded py-8 px-6 max-w-[342px] w-full mx-4 relative">
+    <!-- Кнопка закрытия -->
+    <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+      onclick="closeModal('investModal')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <h2 class="text-2xl font-bold text-center mb-2 text-dark">Invest Now</h2>
+
+    <div class="flex flex-col gap-2">
+      <div class="relative">
+        <input type="text" placeholder="Enter Amount"
+          class="w-full p-3 pr-16 h-12 border border-[#e5e5e5] placeholder:text-[#939393] rounded-md text-lg focus:outline-none focus:border-dark transition-colors">
+        <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#939393] text-sm">USDC</span>
+      </div>
+
+      <div class="flex justify-between text-sm">
+        <span class="text-dark text-sm">Fee:</span>
+        <span class="text-dark text-sm">0,5 USDC</span>
+      </div>
+
+      <div class="flex justify-between text-sm">
+        <span class="text-dark text-sm">You get:</span>
+        <span class="text-dark text-sm">1000 TARK</span>
+      </div>
+
+      <button
+        class="w-full bg-dark text-white py-2 rounded-md font-semibold text-lg hover:bg-gray-800 transition-colors">
+        Confirm Investment
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно Buy Shares -->
+<div id="buySharesModal" class="fixed inset-0 z-[102] items-center justify-center hidden">
+  <div class="bg-white rounded py-8 px-6 max-w-[342px] w-full mx-4 relative">
+    <!-- Кнопка закрытия -->
+    <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+      onclick="closeModal('buySharesModal')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <h2 class="text-2xl font-bold text-center mb-2 text-dark">Buy Shares</h2>
+
+    <div class="flex flex-col gap-2">
+      <div class="relative">
+        <input type="text" placeholder="Enter Token Amount"
+          class="w-full p-3 pr-16 h-12 border border-[#e5e5e5] placeholder:text-[#939393] rounded-md text-lg focus:outline-none focus:border-dark transition-colors">
+        <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#939393] text-sm">TARK</span>
+      </div>
+
+      <div class="flex justify-between text-sm">
+        <span class="text-dark text-sm">Price:</span>
+        <span class="text-dark text-sm">0,5 USDC - 1 TARK</span>
+      </div>
+
+      <div class="flex justify-between text-sm">
+        <span class="text-dark text-sm">You Sell:</span>
+        <span class="text-dark text-sm">1000 TARK</span>
+      </div>
+
+      <div class="flex justify-between text-sm">
+        <span class="text-dark text-sm">Status:</span>
+        <span class="bg-[#27ae60] text-white px-2 py-1 rounded text-xs font-medium">pending</span>
+      </div>
+
+      <button
+        class="w-full bg-dark text-white py-2 rounded-md font-semibold text-lg hover:bg-gray-800 transition-colors">
+        Confirm Trades
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно Connect Wallet -->
+<div id="connectWalletModal" class="fixed inset-0 z-[102] items-center justify-center hidden">
+  <div class="bg-white rounded py-8 px-6 max-w-[342px] w-full mx-4 relative">
+    <!-- Кнопка закрытия -->
+    <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+      onclick="closeModal('connectWalletModal')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <h2 class="text-2xl font-bold text-center mb-2 text-dark">Connect Wallet</h2>
+
+    <div class="flex flex-col gap-2">
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/magic.svg" alt="Magic Eden" class="w-6 h-6">
+        <span class="font-semibold text-dark">Magic Eden</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/phantom.svg" alt="Phantom" class="w-6 h-6">
+        <span class="font-semibold text-dark">Phantom</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/abstract.svg" alt="Abstract" class="w-6 h-6">
+        <span class="font-semibold text-dark">Abstract</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/sei.svg" alt="Sei Global Wallet" class="w-6 h-6">
+        <span class="font-semibold text-dark">Sei Global Wallet</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/glyph.svg" alt="Glyph" class="w-6 h-6">
+        <span class="font-semibold text-dark">Glyph</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/metamask.svg" alt="MetaMask" class="w-6 h-6">
+        <span class="font-semibold text-dark">MetaMask</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-2 py-4 px-5 border border-[#e5e5e5] rounded-md hover:border-dark hover:bg-gray-50 transition-all">
+        <img src="./img/connect-wallet/coinbase.svg" alt="Coinbase" class="w-6 h-6">
+        <span class="font-semibold text-dark">Coinbase</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript для управления модальными окнами
+  function openModal(modalId) {
+    document.getElementById('modalBackdrop').classList.remove('hidden');
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(modalId) {
+    document.getElementById('modalBackdrop').classList.add('hidden');
+    const modal = document.getElementById(modalId);
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('openInvestModal').addEventListener('click', () => openModal('investModal'));
+    document.getElementById('openBuySharesModal').addEventListener('click', () => openModal('buySharesModal'));
+    document.getElementById('openConnectWalletModal').addEventListener('click', () => openModal('connectWalletModal'));
+
+    document.getElementById('modalBackdrop').addEventListener('click', function () {
+      closeModal('investModal');
+      closeModal('buySharesModal');
+      closeModal('connectWalletModal');
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal('investModal');
+        closeModal('buySharesModal');
+        closeModal('connectWalletModal');
+      }
+    });
+  });
+</script>

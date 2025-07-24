@@ -210,6 +210,33 @@ export default defineConfig({
             },
           },
         },
+        {
+          entry: 'src/main.js',
+          filename: 'modals.html',
+          template: 'modals.html',
+          injectOptions: {
+            data: {
+              title: 'modals',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
+
+        {
+          entry: 'src/main.js',
+          filename: 'create_project.html',
+          template: 'create_project.html',
+          injectOptions: {
+            data: {
+              title: 'create_project',
+            },
+            ejsOptions: {
+              views: [process.cwd()],
+            },
+          },
+        },
       ],
     }),
   ],

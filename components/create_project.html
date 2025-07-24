@@ -1,0 +1,140 @@
+<!-- Контейнер формы создания проекта -->
+<div class="bg-white lg:py-12 lg:pb-24 py-8 pb-12">
+  <div class="container max-w-[900px] w-full mx-auto px-4">
+
+    <div id="create-project-title-container" class="mb-10">
+      <h1 class="text-2xl lg:text-4xl font-semibold text-dark">Create Project</h1>
+    </div>
+
+    <!-- Навигация по шагам -->
+    <div id="create-project-navigation" class="flex items-center gap-10 lg:gap-20 mb-5 overflow-x-auto">
+      <div class="step-indicator flex items-center gap-1 whitespace-nowrap" data-step="1">
+        <div id="step-1-icon"></div>
+        <span id="step-1-text" class="text-lg font-bold text-dark underline">Main Info</span>
+      </div>
+
+      <div class="step-indicator flex items-center gap-1 whitespace-nowrap" data-step="2">
+        <div id="step-2-icon"></div>
+        <span id="step-2-text" class="text-lg font-normal text-[#939393]">Media</span>
+      </div>
+
+      <div class="step-indicator flex items-center gap-1 whitespace-nowrap" data-step="3">
+        <div id="step-3-icon"></div>
+        <span id="step-3-text" class="text-lg font-normal text-[#939393]">Finance</span>
+      </div>
+
+      <div class="step-indicator flex items-center gap-1 whitespace-nowrap" data-step="4">
+        <div id="step-4-icon"></div>
+        <span id="step-4-text" class="text-lg font-normal text-[#939393]">Team</span>
+      </div>
+    </div>
+
+    <!-- Форма -->
+    <form id="create-project-form" class="space-y-8">
+
+      <!-- Шаг 1: Main Info -->
+      <%- include('create-project-step1.html') %>
+
+        <!-- Шаг 2: Media -->
+        <%- include('create-project-step2.html') %>
+
+          <!-- Шаг 3: Finance -->
+          <%- include('create-project-step3.html') %>
+
+            <!-- Шаг 4: Team -->
+            <%- include('create-project-step4.html') %>
+
+              <!-- Шаг 5: Success -->
+              <%- include('create-project-success.html') %>
+
+    </form>
+
+  </div>
+</div>
+
+<script>
+  let currentStep = 1;
+  const totalSteps = 4;
+
+  // Функция для отображения определенного шага
+  function showStep(step) {
+    for (let i = 1; i <= 5; i++) {
+      const stepElement = document.getElementById(`step-${i}`);
+      if (stepElement) {
+        stepElement.classList.add('hidden');
+      }
+    }
+
+    const currentStepElement = document.getElementById(`step-${step}`);
+    if (currentStepElement) {
+      currentStepElement.classList.remove('hidden');
+    }
+
+    const stepNavigation = document.getElementById('create-project-navigation');
+    const pageTitle = document.getElementById('create-project-title-container');
+
+    if (step === 5) {
+      if (stepNavigation) stepNavigation.style.display = 'none';
+      if (pageTitle) pageTitle.style.display = 'none';
+    } else {
+      if (stepNavigation) stepNavigation.style.display = 'flex';
+      if (pageTitle) pageTitle.style.display = 'block';
+      updateStepIndicators(step);
+    }
+
+    currentStep = step;
+  }
+
+  function updateStepIndicators(activeStep) {
+    for (let i = 1; i <= totalSteps; i++) {
+      const icon = document.getElementById(`step-${i}-icon`);
+      const text = document.getElementById(`step-${i}-text`);
+
+      if (i < activeStep) {
+        icon.outerHTML = '<img id="step-' + i + '-icon" src="/img/icons/check-2.svg" alt="Check" class="w-5 h-5">';
+        text.className = 'text-lg font-bold text-[#27ae60]';
+      } else if (i === activeStep) {
+        icon.outerHTML = '<div id="step-' + i + '-icon"></div>';
+        text.className = 'text-lg font-bold text-dark underline';
+      } else {
+        icon.outerHTML = '<div id="step-' + i + '-icon"></div>';
+        text.className = 'text-lg font-medium text-[#939393]';
+      }
+    }
+  }
+
+  function nextStep() {
+    if (currentStep < totalSteps) {
+      showStep(currentStep + 1);
+    } else if (currentStep === totalSteps) {
+      showStep(5);
+    }
+  }
+
+  function prevStep() {
+    if (currentStep > 1) {
+      showStep(currentStep - 1);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    showStep(1);
+
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('next-step-btn')) {
+        e.preventDefault();
+        nextStep();
+      }
+
+      if (e.target.classList.contains('prev-step-btn')) {
+        e.preventDefault();
+        prevStep();
+      }
+
+      if (e.target.classList.contains('submit-project-btn')) {
+        e.preventDefault();
+        nextStep();
+      }
+    });
+  });
+</script>

@@ -1,0 +1,90 @@
+<!-- Шаг 2: Media -->
+<div id="step-2" class="space-y-6 hidden">
+
+  <p class="text-base text-dark mb-4">Use project files (posters, image galleries, link to video pitch)</p>
+
+  <div class="mb-8">
+    <div
+      class="border-2 border-dashed border-[#e5e5e5] rounded-lg p-8 text-center h-52 flex flex-col items-center justify-center">
+      <button type="button"
+        class="bg-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2 mx-auto mb-2">
+        Upload Files
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M10.0583 2.55827C10.1755 2.44123 10.3344 2.37549 10.5 2.37549C10.6656 2.37549 10.8245 2.44123 10.9417 2.55827L14.6917 6.30827C14.8021 6.42675 14.8622 6.58346 14.8593 6.74537C14.8565 6.90729 14.7909 7.06178 14.6764 7.17629C14.5618 7.2908 14.4074 7.35639 14.2454 7.35925C14.0835 7.36211 13.9268 7.302 13.8083 7.19161L11.125 4.50827V14.2499C11.125 14.4157 11.0592 14.5747 10.9419 14.6919C10.8247 14.8091 10.6658 14.8749 10.5 14.8749C10.3342 14.8749 10.1753 14.8091 10.0581 14.6919C9.94085 14.5747 9.875 14.4157 9.875 14.2499V4.50827L7.19167 7.19161C7.07319 7.302 6.91648 7.36211 6.75456 7.35925C6.59265 7.35639 6.43816 7.2908 6.32365 7.17629C6.20914 7.06178 6.14354 6.90729 6.14069 6.74537C6.13783 6.58346 6.19793 6.42675 6.30833 6.30827L10.0583 2.55827ZM3 13.6249C3.16576 13.6249 3.32473 13.6908 3.44194 13.808C3.55915 13.9252 3.625 14.0842 3.625 14.2499V16.1249C3.625 16.4565 3.7567 16.7744 3.99112 17.0088C4.22554 17.2432 4.54348 17.3749 4.875 17.3749H16.125C16.4565 17.3749 16.7745 17.2432 17.0089 17.0088C17.2433 16.7744 17.375 16.4565 17.375 16.1249V14.2499C17.375 14.0842 17.4408 13.9252 17.5581 13.808C17.6753 13.6908 17.8342 13.6249 18 13.6249C18.1658 13.6249 18.3247 13.6908 18.4419 13.808C18.5592 13.9252 18.625 14.0842 18.625 14.2499V16.1249C18.625 16.788 18.3616 17.4239 17.8928 17.8927C17.4239 18.3615 16.788 18.6249 16.125 18.6249H4.875C4.21196 18.6249 3.57607 18.3615 3.10723 17.8927C2.63839 17.4239 2.375 16.788 2.375 16.1249V14.2499C2.375 14.0842 2.44085 13.9252 2.55806 13.808C2.67527 13.6908 2.83424 13.6249 3 13.6249Z"
+            fill="white" />
+        </svg>
+      </button>
+      <p class="text-[#939393] text-sm">or drop file in upload area</p>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap items-center gap-5 mb-5">
+
+    <div class="relative flex items-center gap-2 w-fit">
+      <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
+        <img src="/img/project-pic.png" alt="Project picture" class="w-full h-full object-cover">
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-base text-dark truncate">Image3.webp</p>
+      </div>
+      <button class="bg-transparent border-none outline-none">
+        <img src="/img/icons/trash-black.svg" alt="Delete" class="w-4 h-4">
+      </button>
+    </div>
+
+    <div class="relative flex items-center gap-2 w-fit">
+      <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
+        <img src="/img/project-pic.png" alt="Project picture" class="w-full h-full object-cover">
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-base text-dark truncate">Image3.webp</p>
+      </div>
+      <button class="bg-transparent border-none outline-none">
+        <img src="/img/icons/trash-black.svg" alt="Delete" class="w-4 h-4">
+      </button>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <div class="relative flex items-center">
+      <img src="/img/icons/video-link.svg" alt="Youtube" class="absolute left-3 w-4 h-4 ">
+      <input type="url" name="trailer_link" placeholder="Trailer video link"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+
+    <div class="relative flex items-center">
+      <img src="/img/icons/facebook-black.svg" alt="Facebook" class="absolute left-3 w-4 h-4">
+      <input type="url" name="facebook_link" placeholder="Facebook link"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+
+    <div class="relative flex items-center">
+      <img src="/img/icons/telegram.svg" alt="Telegram" class="absolute left-3 w-4 h-4">
+      <input type="url" name="telegram_link" placeholder="Telegram channel link"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+
+    <div class="relative flex items-center">
+      <img src="/img/icons/discord.svg" alt="Discord" class="absolute left-3 w-4 h-4">
+      <input type="url" name="discord_link" placeholder="Discord link"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pl-9 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+  </div>
+
+  <div class="flex justify-between pt-6">
+    <button type="button"
+      class="prev-step-btn flex items-center gap-2 px-6 py-3 text-dark  font-semibold hover:bg-gray-50 transition-colors">
+      <img src="/img/icons/arrow-left-black.svg" alt="Select arrow" class="w-5 h-5">
+      Back
+    </button>
+
+    <button type="button"
+      class="next-step-btn min-w-[180px] justify-center bg-dark text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2">
+      Next
+      <img src="/img/icons/arrow-right.svg" alt="Select arrow" class="w-5 h-5">
+
+    </button>
+  </div>
+
+</div>

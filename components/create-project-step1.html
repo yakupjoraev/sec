@@ -1,0 +1,71 @@
+<!-- Шаг 1: Main Info -->
+<div id="step-1" class="space-y-6">
+
+  <div>
+    <input type="text" name="project_name" placeholder="Project name"
+      class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+  </div>
+
+  <div>
+    <textarea name="project_description" placeholder="Project description" rows="6"
+      class="w-full border border-[#e5e5e5] h-52 rounded-md p-4 text-sm resize-none placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"></textarea>
+  </div>
+
+  <div class="relative">
+    <select name="category"
+      class="appearance-none w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pr-10 text-sm text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all bg-white cursor-pointer">
+      <option value="" disabled selected>Category (genre)</option>
+      <option value="action">Action</option>
+      <option value="comedy">Comedy</option>
+      <option value="drama">Drama</option>
+      <option value="horror">Horror</option>
+      <option value="sci-fi">Sci-Fi</option>
+      <option value="thriller">Thriller</option>
+      <option value="documentary">Documentary</option>
+    </select>
+    <img src="/img/icons/select-arrow.svg" alt="Select arrow"
+      class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+  </div>
+
+  <div class="relative">
+    <select name="country"
+      class="appearance-none w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pr-10 text-sm text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all bg-white cursor-pointer">
+      <option value="" disabled selected>Country</option>
+      <option value="usa">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="canada">Canada</option>
+      <option value="australia">Australia</option>
+      <option value="germany">Germany</option>
+      <option value="france">France</option>
+      <option value="spain">Spain</option>
+      <option value="italy">Italy</option>
+      <option value="russia">Russia</option>
+      <option value="ukraine">Ukraine</option>
+    </select>
+    <img src="/img/icons/select-arrow.svg" alt="Select arrow"
+      class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+  </div>
+
+  <div class="relative">
+    <select name="phase"
+      class="appearance-none w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 pr-10 text-sm text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all bg-white cursor-pointer">
+      <option value="" disabled selected>Phase (stage)</option>
+      <option value="development">Development</option>
+      <option value="pre-production">Pre-production</option>
+      <option value="production">Production</option>
+      <option value="post-production">Post-production</option>
+      <option value="distribution">Distribution</option>
+    </select>
+    <img src="/img/icons/select-arrow.svg" alt="Select arrow"
+      class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+  </div>
+
+  <div class="flex justify-end pt-6">
+    <button type="button"
+      class="next-step-btn min-w-[180px] justify-center bg-dark text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2">
+      Next
+      <img src="/img/icons/arrow-right.svg" alt="Select arrow" class="w-5 h-5">
+    </button>
+  </div>
+
+</div>

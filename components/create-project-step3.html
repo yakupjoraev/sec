@@ -1,0 +1,289 @@
+<!-- Шаг 3: Finance -->
+<div id="step-3" class="space-y-8 hidden">
+
+  <div class="space-y-4">
+    <h3 class="text-lg lg:text-2xl font-semibold text-dark">Target</h3>
+
+    <div>
+      <input type="text" name="target_amount" placeholder="Target Amount (min) → “Minimum to launch project”"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+
+    <div>
+      <input type="text" name="target_amount_2"
+        placeholder="Target Amount (max) → “Maximum goal. Campaign ends if this is reached early.”"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+
+    <div>
+      <input type="text" name="deadline" placeholder="Deadline → “Last day for funding before auto-refund triggers”"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+
+    <div>
+      <input type="text" name="usdc_required" placeholder="USDC (Solana) -project wallet"
+        class="w-full border border-[#e5e5e5] h-12 rounded-md py-3 px-4 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <div class="flex items-center gap-2">
+      <input type="checkbox" id="milestone_unlock"
+        class="w-4 h-4 rounded border border-[#e5e5e5] text-dark focus:ring-dark focus:ring-2">
+      <label for="milestone_unlock" class="text-sm font-normal text-dark cursor-pointer">Milestone Unlock</label>
+    </div>
+
+    <div class="flex flex-col gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" name="milestone_1" placeholder="Milestone 1"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="milestone_1_desc" placeholder="Description"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="milestone_1_unlock" placeholder="Unlock % or amount"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" name="milestone_2" placeholder="Milestone 1"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="milestone_2_desc" placeholder="Description"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="milestone_2_unlock" placeholder="Unlock % or amount"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" name="milestone_3" placeholder="Milestone 1"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="milestone_3_desc" placeholder="Description"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="milestone_3_unlock" placeholder="Unlock % or amount"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="text-center pt-2">
+        <button type="button"
+          class="text-dark font-medium text-sm flex items-center gap-2 mx-auto hover:text-gray-600 transition-colors">
+          <img src="/img/icons/plus-black.svg" alt="Plus" class="w-4 h-4">
+          Add Milestone
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <h3 class="text-lg lg:text-2xl font-semibold text-dark">Budget breakdown</h3>
+
+    <div class="flex flex-col gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Development" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="development_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="development_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Packaging" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="packaging_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="packaging_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Pre-production" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="preproduction_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="preproduction_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Production" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="production_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="production_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Post-Production" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="postproduction_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="postproduction_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Marketing" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="marketing_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="marketing_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <input type="text" value="Contingency" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm bg-white">
+        <input type="text" name="contingency_budget" placeholder="$ (fixed)"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+        <input type="text" name="contingency_percent" placeholder="choose %"
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all">
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <h3 class="text-lg lg:text-2xl font-semibold text-dark">Phases</h3>
+
+    <div class="space-y-3">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" value="Development" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393]">
+        <div class="relative datepicker-container">
+          <input type="text" name="development_start" placeholder="Start date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+        <div class="relative datepicker-container">
+          <input type="text" name="development_finish" placeholder="Finish date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" value="Pre-production" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393]">
+        <div class="relative datepicker-container">
+          <input type="text" name="preproduction_start" placeholder="Start date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+        <div class="relative datepicker-container">
+          <input type="text" name="preproduction_finish" placeholder="Finish date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" value="Production" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393]">
+        <div class="relative datepicker-container">
+          <input type="text" name="production_start" placeholder="Start date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+        <div class="relative datepicker-container">
+          <input type="text" name="production_finish" placeholder="Finish date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" value="Post-Production" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393]">
+        <div class="relative datepicker-container">
+          <input type="text" name="postproduction_start" placeholder="Start date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+        <div class="relative datepicker-container">
+          <input type="text" name="postproduction_finish" placeholder="Finish date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" value="Distribution" readonly
+          class="border border-[#e5e5e5] h-12 rounded-md py-2 px-3 text-sm placeholder:text-[#939393]">
+        <div class="relative datepicker-container">
+          <input type="text" name="distribution_start" placeholder="Start date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+        <div class="relative datepicker-container">
+          <input type="text" name="distribution_finish" placeholder="Finish date"
+            class="w-full border border-[#e5e5e5] h-12 rounded-md py-2 px-4 pr-10 text-sm placeholder:text-[#939393] focus:ring-1 focus:ring-dark focus:border-dark transition-all"
+            data-input>
+          <a class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" data-toggle>
+            <img src="/img/icons/datapicker.svg" alt="Calendar" class="w-5 h-5">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-between pt-6 gap-3">
+    <button type="button"
+      class="prev-step-btn flex items-center gap-2 px-6 py-3 text-dark  font-semibold hover:bg-gray-50 transition-colors">
+      <img src="/img/icons/arrow-left-black.svg" alt="Select arrow" class="w-5 h-5">
+      Back
+    </button>
+
+    <div class="flex gap-3 flex-wrap">
+      <button type="button"
+        class="px-6 py-3 text-dark border border-gray-300 min-w-[180px] justify-center rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+        Preview
+      </button>
+
+      <button type="button"
+        class="next-step-btn bg-dark text-white px-8 py-3 min-w-[180px] justify-center rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2">
+        Next
+        <img src="/img/icons/arrow-right.svg" alt="Select arrow" class="w-5 h-5">
+      </button>
+
+      <button type="button"
+        class="next-step-btn bg-[#27ae60] text-white px-8 py-3 min-w-[180px] justify-center rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2">
+        Submit
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    flatpickr(".datepicker-container", {
+      wrap: true,
+      dateFormat: "Y-m-d",
+    });
+  });
+</script>
